@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model WebAdvert.Web.Models.Home.HomeModel
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1> 
+    @if (Model.IsAuth)
+    {
+        <b>@Model.Name</b>
+        <a asp-controller="Accounts" asp-action="Logout">Logout</a>
+    }
+</div>
